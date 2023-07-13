@@ -1,0 +1,18 @@
+ion-content.background{
+    --background: url("/assets/icon/fondo.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+
+  
+.form-wrapper {
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: #007bff;
+  padding: 5px;
+  border-radius: 1px;
+}

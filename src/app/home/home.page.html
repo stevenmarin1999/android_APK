@@ -1,20 +1,133 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-content class="background">
+    <div class="fondo">
+      <ion-menu contentId="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <div class="menu-header-bg">
+              <ion-breadcrumb href="#home">
+                <ion-icon class="mi-icon" slot="start" name="home" style="font-size: larger;"></ion-icon><strong>MENU PRINCIPAL</strong>
+              </ion-breadcrumb>
+    
+              <ion-note>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="auto">
+                      <ion-icon name="mail-outline" color="danger"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      <ion-label>Parqueadero@gmail.com</ion-label>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-note>
+            </div>
+          </ion-toolbar>
+        </ion-header>
+    
+        <div class="fondo">
+          <ion-note>
+            <ion-grid>
+              <ion-row>
+                <div class="contenedor-imagen1" >
+                  <ion-img src="assets/icon/parque.gif" class="centrado"></ion-img>
+                </div>
+    
+                <ion-col>
+                  <ion-button class="my-custom-button"  shape="round" (click)="paginavehiculo()" lines="none">
+                      <ion-icon name ="car-outline" size="large" color="write">
+                    </ion-icon> Vehiculos
+                  </ion-button>
+                </ion-col>
+    
+                <ion-col>
+                  <ion-button class="my-custom-button" shape="round" (click)="paginaempleado()">
+                      <ion-icon name="person-circle-outline" size="large" color="write">
+                      </ion-icon>Empleados
+                  </ion-button>
+                </ion-col>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+                <ion-col>
+                  <ion-button class="my-custom-button" shape="round" (click)="paginaestacionar()">
+                      <ion-icon name="person-circle-outline" size="large" color="write">
+                      </ion-icon>Estacionar
+                  </ion-button>
+                </ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    
+                <ion-col>
+                  <ion-button  class="my-custom-button" shape="round" (click)="productoService.takePicture()">
+                    <ion-icon name="camera-outline" size="large" color = "write"></ion-icon>Fotografia
+                  </ion-button>
+                </ion-col>
+    
+                <ion-col>
+                  <ion-button class="my-custom-button"  shape="round" (click)="paginacliente()">
+                      <ion-icon name="accessibility-outline" size="large" color="write"></ion-icon>Los clientes
+                  </ion-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-button class="my-custom-button"  shape="round" (click)="paginanosotros()">
+                      <ion-icon name="alert-circle" size="large" color="write">
+                      </ion-icon>Sobre Nosotros
+                  </ion-button>
+                </ion-col>
+
+
+                <ion-col>
+                  <ion-button class="my-custom-button"  shape="round" (click)="paginacodigoqr()">
+                      <ion-icon name="qr-code-outline" size="large" color="write">
+                      </ion-icon>Compartir
+                  </ion-button>
+                </ion-col>
+    
+              </ion-row>
+            </ion-grid>
+          </ion-note>
+        </div>
+        
+        <div>
+          <ion-note>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  Derechos Reservados 2023 inc
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-note>
+        </div> 
+      </ion-menu>
+    
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-menu-button>
+                  <ion-icon name="list"></ion-icon>
+                </ion-menu-button>
+              </ion-buttons>
+    
+            <ion-icon name="logo-nodejs" class="mi-icono"></ion-icon>
+            <strong class="texto-parqueadero">PARQUEADERO</strong>
+
+            <ion-icon name="pin-outline"></ion-icon>
+
+          </ion-toolbar>
+
+            <ion-toolbar color="primary" style="height: 10px;">
+            </ion-toolbar> 
+
+            <div>
+              <ion-img src="assets/icon/fonfo3.jpg" class="contenedor-imagen2"></ion-img>
+            </div>
+            
+        </ion-header>
+        
+      </div>
+    </div>
+    
+  </ion-content>
+  
+</ion-app>

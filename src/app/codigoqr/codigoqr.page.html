@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-icon name="logo-nodejs" class="mi-icono"></ion-icon>
+      <strong class="texto-vehiculos">Codigo QR</strong>
+    </ion-toolbar>
+    <ion-toolbar color="primary" style="height: 5px;">
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" class="contenedor-imagen1">
+    
+    <div class="contenedor-imagen-qr">
+      <ion-item>
+        <img src="assets/icon/qr.png">
+      </ion-item>
+    </div>
+
+    <div>
+      <ion-item>
+        <ion-button size ="large" (click)="paginahome()">
+          <ion-icon slot="start" name="arrow-back-circle-outline"></ion-icon>Volver
+        </ion-button>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-content>

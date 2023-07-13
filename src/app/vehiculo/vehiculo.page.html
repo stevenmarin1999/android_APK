@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="write">
+    <ion-icon name="logo-nodejs" class="mi-icono"></ion-icon>
+      <strong class="texto-vehiculos">VEHICULOS</strong>
+      
+    <ion-buttons slot="end">
+      <ion-icon color="dark" slot="icon-only" name="car" (click)="openAlert()"></ion-icon>
+      <ion-icon color="dark" slot="icon-only" name="add" (click)="openAlert()"></ion-icon>
+      <ion-label color="dark">Agregar</ion-label>
+    </ion-buttons>
+    </ion-toolbar>
+      <ion-toolbar color="primary" style="height: 5px;">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-content class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item-sliding *ngFor="let vehiculo of vehiculos">
+    <ion-item>
+      <ion-label>Placa: {{vehiculo.placa}}</ion-label>
+      <ion-label>Modelo: {{vehiculo.modelo}}</ion-label>
+      <ion-label>Marca: {{vehiculo.marca}}</ion-label>
+      <ion-label>Color: {{vehiculo.color}}</ion-label>
+      <ion-label>Cliente: {{vehiculo.cliente}}</ion-label>
+      <!-- <ion-button shape="round" (click)="paginatikete()" >TIKETE</ion-button> -->
+      
+    </ion-item>
+
+    <ion-item-options side="end">
+        <ion-item-option color="danger"   >
+          <ion-icon name="trash"></ion-icon>
+        </ion-item-option>
+    </ion-item-options>
+
+  </ion-item-sliding>
+
+  <ion-button shape="round" (click)="paginaprincipal()" >
+    <ion-icon slot="start" name="arrow-back-circle-outline"></ion-icon>
+    Volver atras
+  </ion-button>
+  <ion-button shape="round" (click)="paginatikete()" >TIKETE</ion-button> 
+</ion-content>

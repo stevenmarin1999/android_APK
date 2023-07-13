@@ -25,3 +25,29 @@
 #container a {
   text-decoration: none;
 }
+
+.my-custom-button {
+  width: 280px;
+  height: 40px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Otros estilos personalizados */
+}
+
+ion-item {
+  position: relative;
+}
+
+ion-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50px; /* Ajusta la posición de la línea según tus necesidades */
+  width: calc(100% - 50px); /* Ajusta el ancho de la línea según tus necesidades */
+  height: 1px;
+  background-color: #000; /* Cambia el color de la línea según tus necesidades */
+}
+
+ion-content.background{
+  --background: url("/assets/icon/fondo.jpg");
+}
